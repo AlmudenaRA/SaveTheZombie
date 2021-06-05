@@ -25,13 +25,13 @@ public class PjMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal"); //controla si el pj va hacia la izd o drcha
 
         //Si va hacia la izquierda, cambia su posición x para que el pj vaya hacía la izq
-        if (horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-        else if (horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f); //si va hacia la dcha mira hacia la dcha
+        if (horizontal < 0.0f) transform.localScale = new Vector3(-0.5f, 0.5f, 1.0f);
+        else if (horizontal > 0.0f) transform.localScale = new Vector3(0.5f, 0.5f, 1.0f); //si va hacia la dcha mira hacia la dcha
         animator.SetBool("running", horizontal != 0.0f);
 
-        Debug.DrawRay(transform.position, Vector3.down * 2.0f, Color.red);
+        Debug.DrawRay(transform.position, Vector3.down * 1.0f, Color.red);
         //Comprobar si está en el aire o en el suelo
-        if (Physics2D.Raycast(transform.position, Vector3.down, 2.0f))
+        if (Physics2D.Raycast(transform.position, Vector3.down, 1.0f))
         {
             grounded = true;
         }
