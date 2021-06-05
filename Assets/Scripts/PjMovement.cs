@@ -22,11 +22,11 @@ public class PjMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal"); //controla si el pj va hacia la izd o drcha
+        horizontal = Input.GetAxisRaw("Horizontal"); //controla si el pj va a la izd o drcha
 
-        //Si va hacia la izquierda, cambia su posición x para que el pj vaya hacía la izq
+        //Si va a la izquierda, cambia su posición x para que el pj vaya a la izq
         if (horizontal < 0.0f) transform.localScale = new Vector3(-0.5f, 0.5f, 1.0f);
-        else if (horizontal > 0.0f) transform.localScale = new Vector3(0.5f, 0.5f, 1.0f); //si va hacia la dcha mira hacia la dcha
+        else if (horizontal > 0.0f) transform.localScale = new Vector3(0.5f, 0.5f, 1.0f); //si va a la dcha mira a la dcha
         animator.SetBool("running", horizontal != 0.0f);
 
         Debug.DrawRay(transform.position, Vector3.down * 1.0f, Color.red);
@@ -41,12 +41,23 @@ public class PjMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) && grounded)
         {
             Jump();
+
+            animator.SetBool("jump", true);
+            animator.SetBool("running", false);
+
+        }
+
+        if (!grounded)
+        {
+           
+            animator.SetBool("jump", false);
         }
     }
 
     private void Jump()
     {
         rigidbody2D.AddForce(Vector2.up * jumpForce); //up => x = 0 ; y = 1
+       
     }
 
     private void FixedUpdate()
