@@ -7,7 +7,7 @@ public class PjMovement : MonoBehaviour
     public float speed;
     public float jumpForce;
 
-    private Rigidbody2D rigidbody2D;
+    private new Rigidbody2D rigidbody2D;
     private Animator animator;
     private float horizontal;
     private bool grounded;
@@ -48,8 +48,7 @@ public class PjMovement : MonoBehaviour
         }
 
         if (!grounded)
-        {
-           
+        {           
             animator.SetBool("jump", false);
         }
     }
