@@ -7,7 +7,7 @@ public class PjMovement : MonoBehaviour
     public float speed;
     public float jumpForce;
 
-    private new Rigidbody2D rigidbody2D;
+    private Rigidbody2D rigidbody2D;
     private Animator animator;
     private float horizontal;
     private bool grounded;
