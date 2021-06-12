@@ -1,19 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Collected : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    public Text totalCollect;
+    public Text addCollect;
+    private int totalCollectsInLevel;
+
+    private void Start()
     {
-        if (collision.CompareTag("Player"))
-        {
-            //Desactivar el sprite Renderer del recogible
-            GetComponent<SpriteRenderer>().enabled = false;
-            //Activar la animación
-            gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            //Eliminar todo en 5 segundos
-            Destroy(gameObject, 0.5f);
-        }
+        totalCollectsInLevel = transform.childCount;
     }
+
+    private void Update()
+    {
+        totalCollect.text = totalCollectsInLevel.ToString();
+        addCollect.text = transform.childCount.ToString();
+    }
+
+   
 }

@@ -40,7 +40,7 @@ public class PjMovement : MonoBehaviour
         //Salta si pulsa la tecla W
         if (Input.GetKeyDown(KeyCode.W) && grounded)
         {
-            Jump();
+            rigidbody2D.AddForce(Vector2.up * jumpForce); //up => x = 0 ; y = 1
 
             animator.SetBool("jump", true);
             animator.SetBool("running", false);
@@ -51,12 +51,6 @@ public class PjMovement : MonoBehaviour
         {           
             animator.SetBool("jump", false);
         }
-    }
-
-    private void Jump()
-    {
-        rigidbody2D.AddForce(Vector2.up * jumpForce); //up => x = 0 ; y = 1
-       
     }
 
     private void FixedUpdate()

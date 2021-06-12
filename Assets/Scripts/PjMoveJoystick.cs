@@ -5,7 +5,6 @@ using UnityEngine;
 public class PjMoveJoystick : MonoBehaviour
 {
     private float horizontalMove = 0f;
-    private float verticalMove = 0f;
 
     public Joystick joystick;
     public float speed = 2;
@@ -14,8 +13,7 @@ public class PjMoveJoystick : MonoBehaviour
 
     Rigidbody2D rigidbody2D;
     public Animator animator;
-    public SpriteRenderer spriteRenderer;
-    private float horizontal;
+    public SpriteRenderer spriteRenderer;   
     private bool grounded;
 
     // Start is called before the first frame update
@@ -58,7 +56,7 @@ public class PjMoveJoystick : MonoBehaviour
         {
             animator.SetBool("jump", true);
             animator.SetBool("running", false);
-            animator.SetBool("jump", false);
+            
         }
 
         if (grounded == true)
@@ -68,12 +66,10 @@ public class PjMoveJoystick : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {
-        
+    {       
         horizontalMove = joystick.Horizontal * runSpeedHorizontal;
         transform.position += new Vector3(horizontalMove, 0, 0) * Time.deltaTime * speed;
 
-        
     }
 
     public void Jump()
