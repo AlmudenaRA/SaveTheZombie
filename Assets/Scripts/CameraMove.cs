@@ -12,5 +12,6 @@ public class CameraMove : MonoBehaviour
         Vector3 position = transform.position; //coger la posición de la cámara
         position.x = pj.transform.position.x; //coge la posición del personaje
         transform.position = position;
+       
     }
 }
