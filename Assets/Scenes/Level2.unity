@@ -10588,7 +10588,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 841349179}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.032337904, y: -0.010393977, z: -9}
+  m_LocalPosition: {x: 0.031841993, y: -0.010393977, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12699,7 +12699,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026259852}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1725840ba46c5ba4cb3bff2151030874, type: 3}
   m_Name: 
@@ -12713,15 +12713,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026259852}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e496ffe76187cc40837e98b407a5259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 602247013}
-  speed: 1
-  jumpSpeed: 3
-  runSpeedHorizontal: 2
+  speed: 0.5
+  jumpSpeed: 4
+  runSpeedHorizontal: 1
   animator: {fileID: 1026259855}
   spriteRenderer: {fileID: 1026259856}
 --- !u!1 &1027688439
