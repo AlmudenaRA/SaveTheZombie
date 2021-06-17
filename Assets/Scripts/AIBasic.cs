@@ -56,6 +56,7 @@ public class AIBasic : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f); //esperar durante 5seg para comprobar la posición del enemigo
 
+        //comprueba la posición del enemigo para que mire hacia ese lado
         if(transform.position.x > actualPos.x)
         {
             spriteRenderer.flipX = true;
