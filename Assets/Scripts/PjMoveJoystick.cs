@@ -7,7 +7,7 @@ public class PjMoveJoystick : MonoBehaviour
     private float horizontalMove = 0f;
 
     public Joystick joystick;
-    public float speed = 2;
+    public float speed = 1.5f;
     public float jumpSpeed = 1.25f;
     public float runSpeedHorizontal = 2;
 
