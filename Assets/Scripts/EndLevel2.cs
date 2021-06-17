@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -43,6 +44,7 @@ public class EndLevel2 : MonoBehaviour
     public void EnemyDie()
     {
         Destroy(gameObject);
+        Thread.Sleep(2000);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
