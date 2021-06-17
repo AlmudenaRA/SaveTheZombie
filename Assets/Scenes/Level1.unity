@@ -19263,16 +19263,10 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 8952572882780300440, guid: 3f39edec61ec43241ad0e9f616d8669b, type: 3}
   m_PrefabInstance: {fileID: 8952572883245171545}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &1685432256 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8952572882780300517, guid: 3f39edec61ec43241ad0e9f616d8669b, type: 3}
-  m_PrefabInstance: {fileID: 8952572883245171545}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1685432258
+--- !u!114 &1685432258 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1535878448985807480, guid: 3f39edec61ec43241ad0e9f616d8669b, type: 3}
+  m_PrefabInstance: {fileID: 8952572883245171545}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685432251}
   m_Enabled: 0
@@ -19280,12 +19274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beefc15b61947ff49a1e39de319f397c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 2037394024}
-  speed: 1
-  jumpSpeed: 7
-  runSpeedHorizontal: 2
-  animator: {fileID: 1685432252}
-  spriteRenderer: {fileID: 1685432256}
 --- !u!114 &1685432259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19303,22 +19291,6 @@ MonoBehaviour:
   - {fileID: 1077230474}
   - {fileID: 1978529771}
   - {fileID: 744613549}
---- !u!114 &1685432260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1685432251}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1725840ba46c5ba4cb3bff2151030874, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runSpeed: 2
-  jumpSpeed: 3
-  isGrounded: 0
-  jumpForce: 100
 --- !u!1 &1691722260
 GameObject:
   m_ObjectHideFlags: 0
@@ -25608,6 +25580,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1535878448985807480, guid: 3f39edec61ec43241ad0e9f616d8669b, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 2037394024}
+    - target: {fileID: 1535878448985807480, guid: 3f39edec61ec43241ad0e9f616d8669b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8952572882780300441, guid: 3f39edec61ec43241ad0e9f616d8669b, type: 3}
       propertyPath: speed
       value: 200
