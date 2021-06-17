@@ -42,7 +42,7 @@ public class Lives : MonoBehaviour
     {
         life--;
         CheckLife();
-        Debug.Log("Lives damaged: " + life);
+        //Debug.Log("Lives damaged: " + life);
     }
 
     public void RegainLife()
