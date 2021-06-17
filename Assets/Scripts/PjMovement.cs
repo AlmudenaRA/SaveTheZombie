@@ -22,7 +22,7 @@ public class PjMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal"); //controla si el pj va a la izd o drcha
+        horizontal = Input.GetAxisRaw("Horizontal"); //controla si el pj va a la izd o drcha según la tecla que pulse
 
         //Si va a la izquierda, cambia su posición x para que el pj vaya a la izq
         if (horizontal < 0.0f) transform.localScale = new Vector3(-0.5f, 0.5f, 1.0f);
@@ -56,6 +56,6 @@ public class PjMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //Modificar la velocidad
-        rigidbody2D.velocity = new Vector2(horizontal, rigidbody2D.velocity.y);
+        rigidbody2D.velocity = new Vector2(horizontal * speed, rigidbody2D.velocity.y);
     }
 }
