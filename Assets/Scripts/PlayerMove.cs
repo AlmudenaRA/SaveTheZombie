@@ -56,6 +56,6 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         //Modificar la velocidad
-        rigidbody2D.velocity = new Vector2(horizontal, rigidbody2D.velocity.y);
+        rigidbody2D.velocity = new Vector2(horizontal * speed, rigidbody2D.velocity.y);
     }
 }
